@@ -1,0 +1,18 @@
+Research - Ryan
+https://www.coffeebeandirect.com/
+- created with shopify (shopify is built with react+typescript)
+- minimal navbar (shop, subsciptions, search, profile, cart)
+- home page utilizes all of the whitespace
+- shop has a filter checklist on left to narrow selection
+- price filtering
+- Each shop item is a reuseable component so the price and image are the only things that change between items.
+- on checkout page each bag size and grind combination results in a different query string
+
+https://www.drinktrade.com/coffee/all-coffee
+- really smooth subscription model
+- asks you questions about your coffee preferences and just chooses a subscription option for you then takes you right to checkout
+- item filtering except this one is more detailed because it's fancy artisan coffee
+- uses CSS to make items move when you hover over them
+- built with HTML/CSS/JS stack not sure of JS framework
+- many menu options and a more complex navbar
+- also built with reuseable components for shop items 
