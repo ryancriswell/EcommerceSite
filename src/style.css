@@ -15,4 +15,78 @@ nav {
 .nav-button {
     text-transform: capitalize;
     flex-grow: 1;
+<<<<<<< Updated upstream
 }
+=======
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    transition: flex-grow 0.5s, color 0.5s;
+}
+.nav-button:hover {
+    flex-grow: 1.2;
+    color: white;
+    text-decoration: underline;
+}
+#page-buttons > .flex-dummy {
+    flex-grow: 1.5;
+}
+/* ========================= Body ============================ */
+.section-header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+
+/* ========================= About Us ============================ */
+.aboutus--row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.aboutus--column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.aboutus--h1{
+    text-align: center;
+    font-size: 4vw;
+    padding: 50px 50px 0px 50px;
+
+}
+
+.aboutus--h3{
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 0px 50px 50px 50px;
+}
+
+.aboutus--img{
+    max-width: 100%;  
+    height: auto;  
+}
+
+#aboutus--subscription-wrapper{
+    background-color: #faf0e6;
+}
+#aboutus--subscription-title{
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 0px;
+}
+
+#aboutus--subscription-body{
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 1.5vw;
+    padding-bottom: 40px;
+}
+
+
+>>>>>>> Stashed changes
