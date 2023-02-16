@@ -3,6 +3,8 @@
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --highlight-color: #ff0000;
+    --nav-button-color: grey;
+    --section-background: #f7f5eb;
 }
 body {
     margin: 0;
@@ -65,7 +67,7 @@ nav {
     text-align: center;
     text-decoration: none;
     color: black;
-    background-color: grey;
+    background-color: var(--nav-button-color);
     transition: flex-grow 0.5s, color 0.5s, background-color 0.5s;
 }
 .nav-button:hover, .nav-button:focus {
@@ -84,7 +86,7 @@ nav {
     text-align: left;
 }
 .showcase-container {
-    background-color: #f7f5eb;
+    background-color: var(--section-background);
     justify-content: space-around;
     display: flex;
     flex-direction: row;
