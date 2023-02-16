@@ -7,6 +7,7 @@
     </head>
     <body>
         <nav>
+            <a id="skip-link" tabindex="0" href="#content">Skip to content.</a>
             <!-- Upper section, with logo and account btns -->
             <div id="upper-container">
                 <img src="../images/logo.png" alt="Lads Coffee Co. Logo" id="logo">
@@ -26,18 +27,24 @@
                 <div class="flex-dummy"></div>
             </div>
         </nav>
-        <section class="showcase-container" id="best-choices">
-            <div class="item-showcase">
+        <div id="content">
+            <section class="showcase-container" id="best-choices">
+                <div class="item-showcase">
+                    <h1 class="section-header">Top Review</h1>
+                    <img src="../images/Mocha Bag.png" alt="Mocha Bean coffee" class="item-image">
+                    <p class="section-boldline">Tod Smith</p>
+                    <p class="section-text"></p>
+                </div>
+                <div id="item-showcase">
+                    <h1 class="section-header">Owner's Choice</h1>
+                    <img src="../images/Robusta-Bean.png" alt="Robusta Bean coffee" class="item-image">
+                    <p class="section-boldline">The Lads Favorite</p>
+                    <p class="section-text"></p>
+                </div>
+            </section>
+            <section class="showcase-container" id="top-sellers">
                 <h1 class="section-header">Top Review</h1>
-                <img src="../images/Mocha Bag.png" alt="Mocha Bean coffee" class="item-image">
-            </div>
-            <div id="item-showcase">
-                <h1 class="section-header">Owner's Choice</h1>
-                <img src="../images/Robusta-Bean.png" alt="Robusta Bean coffee" class="item-image">
-            </div>
-        </section>
-        <section class="showcase-container" id="top-sellers">
-            <h1 class="section-header">Top Review</h1>
-        </section>
+            </section>
+        </div>
     </body>
 </html>
