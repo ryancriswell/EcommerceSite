@@ -106,6 +106,7 @@ nav {
 #page-buttons > .flex-dummy {
     flex-grow: 1.5;
 }
+<<<<<<< Updated upstream
 /* ========================= Banner ========================== */
 #banner > img {
     margin: 0;
@@ -113,6 +114,10 @@ nav {
     height: auto;
     object-fit: cover;
 }
+=======
+
+
+>>>>>>> Stashed changes
 /* ========================= Body ============================ */
 .section-header {
     font-size: xx-large;
@@ -144,4 +149,20 @@ nav {
 .section-text {
     font-size: x-large;
     text-align: left;
+}
+
+
+
+button {
+    background-color: #857658;
+    color: #000000;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 200px;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+    outline: none;
 }
