@@ -1,3 +1,9 @@
+/* !================= Global document styles =====================!*/
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* ========================== Top bars ============================ */
 nav {
     margin: 0px;
@@ -34,7 +40,7 @@ nav {
     padding: 2vw;
 }
 .nav-button {
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding: 2vh;
     flex-grow: 1;
     text-align: center;
@@ -53,6 +59,18 @@ nav {
 }
 /* ========================= Body ============================ */
 .section-header {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight: 150%;
     text-align: left;
+}
+.showcase-container {
+    background-color: #f7f5eb;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+    margin-bottom: 50px;
+}
+#item-showcase {
+    width: 33.3vw;
 }
