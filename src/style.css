@@ -9,7 +9,9 @@ html {
 body {
     margin: 0;
 }
-
+.sr-only {
+    visibility: hidden;
+}
 /* ========================== Top bars ============================ */
 #skip-link {
     position: absolute;
@@ -47,8 +49,12 @@ nav {
 #tools {
     /* anchor to bottom right corner of parent */
     grid-column: 3;
-    right:0;
-    bottom: 0;
+}
+#tools > a {
+    font-size: x-large;
+    text-decoration: none;
+    margin: 50px;
+    color: black;
 }
 /* Page nav ============================ */
 #page-buttons {
