@@ -1,23 +1,42 @@
+/* ========================== Top bars ============================ */
 nav {
-    position: fixed;
     margin: 0px;
     top: 0px;
     left: 0px;
     right: 0px;
 }
+#upper-container {
+    display: inline-grid;
+    width: 100%;;
+    grid-template-columns: 33.3% auto 33.3%;
+}
+/* Logo ============================ */
+#logo {
+    grid-column: 2;
+    height: 10vh;
+    width: auto;
+}
+/* Toolbar ============================ */
+#tools {
+    /* anchor to bottom right corner of parent */
+    grid-column: 3;
+    right:0;
+    bottom: 0;
+}
+/* Page nav ============================ */
 #page-buttons {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
     display: flex;
+    gap: 5vw;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
     padding: 2vw;
 }
 .nav-button {
     text-transform: capitalize;
+    padding: 2vh;
     flex-grow: 1;
-<<<<<<< Updated upstream
-}
-=======
     text-align: center;
     text-decoration: none;
     color: black;
@@ -89,4 +108,3 @@ nav {
 }
 
 
->>>>>>> Stashed changes
