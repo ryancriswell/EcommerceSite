@@ -56,7 +56,6 @@ nav {
     /* anchor to bottom right corner of parent */
     grid-column: 3;
     display: flex;
-    gap: 5vw;
     flex-direction: row;
     justify-content: flex-end;
     align-content:flex-end;
@@ -89,7 +88,6 @@ nav {
     text-align: center;
     text-decoration: none;
     color: black;
-<<<<<<< HEAD
     background-color: var(--nav-button-color);
 }
 .nav-button:hover, .nav-button:focus {
@@ -108,7 +106,6 @@ nav {
 #page-buttons > .flex-dummy {
     flex-grow: 1.5;
 }
-<<<<<<< Updated upstream
 /* ========================= Banner ========================== */
 #banner > img {
     margin: 0;
@@ -116,10 +113,6 @@ nav {
     height: auto;
     object-fit: cover;
 }
-=======
-
-
->>>>>>> Stashed changes
 /* ========================= Body ============================ */
 .section-header {
     font-size: xx-large;
@@ -168,24 +161,6 @@ button {
     position: relative;
     outline: none;
 }
-=======
-    background-color: grey;
-    transition: flex-grow 0.5s, color 0.5s;
-}
-.nav-button:hover {
-    flex-grow: 1.2;
-    color: white;
-    text-decoration: underline;
-}
-#page-buttons > .flex-dummy {
-    flex-grow: 1.5;
-}
-/* ========================= Body ============================ */
-.section-header {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left;
-}
-
 /* ========================= About Us ============================ */
 .aboutus--row {
     display: flex;
@@ -235,6 +210,3 @@ button {
     font-size: 1.5vw;
     padding-bottom: 40px;
 }
-
-
->>>>>>> origin/about-us
