@@ -7,15 +7,27 @@
     </head>
     <body>
         <nav>
+            <a id="skip-link" tabindex="0" href="#content">Skip to content.</a>
             <!-- Upper section, with logo and account btns -->
             <div id="upper-container">
-                <a href="index.html">
-                    <img src="../images/logo.png" alt="Lads Coffee Co. Logo" id="logo">
-                </a>
+                <div id="logo-container">
+                    <a href="index.html">
+                        <img src="../images/logo.png" alt="Lads Coffee Co. Logo" id="logo">
+                    </a>
+                </div>
                 <div id="tools">
-                    <a href="search.html">Search</a>
-                    <a href="account.html">Account</a>
-                    <a href="cart.html">My Cart</a>
+                    <a href="search.html">
+                        <i aria-hidden="true" class="fas fa-magnifying-glass" title="Search"></i>
+                        <span class="sr-only">Search</span>
+                    </a>
+                    <a href="account.html">
+                        <i aria-hidden="true" class="fas fa-user" title="My Account"></i>
+                        <span class="sr-only">Account</span>
+                    </a>
+                    <a href="cart.html">
+                        <i aria-hidden="true" class="fas fa-cart-shopping" title="My Cart"></i>
+                        <span class="sr-only">My Cart</span>
+                    </a>
                 </div>
             </div>
             <!-- Lower section, with page links -->
