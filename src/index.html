@@ -6,40 +6,8 @@
         <link rel="icon" href="../images/logo.png">
     </head>
     <body>
-        <nav>
-            <a id="skip-link" tabindex="0" href="#content">Skip to content.</a>
-            <!-- Upper section, with logo and account btns -->
-            <div id="upper-container">
-                <div id="logo-container">
-                    <img src="../images/logo.png" alt="Lads Coffee Co. Logo" id="logo">
-                </div>
-                <div id="tools">
-                    <a href="search.html">
-                        <i aria-hidden="true" class="fas fa-magnifying-glass" title="Search"></i>
-                        <span class="sr-only">Search</span>
-                    </a>
-                    <a href="account.html">
-                        <i aria-hidden="true" class="fas fa-user" title="My Account"></i>
-                        <span class="sr-only">Account</span>
-                    </a>
-                    <a href="cart.html">
-                        <i aria-hidden="true" class="fas fa-cart-shopping" title="My Cart"></i>
-                        <span class="sr-only">My Cart</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Lower section, with page links -->
-            <div id="page-buttons">
-                <div class="flex-dummy"></div>
-                <a href="about-us.html" class="nav-button">About Us</a>
-                <a href="shop.html" class="nav-button">Shop</a>
-                <a href="subscription.html" class="nav-button">Subscription</a>
-                <a href="map.html" class="nav-button">Locations</a>
-                <div class="flex-dummy"></div>
-            </div>
-        </nav>
-        <div id="banner">
-            <img src="../images/Banner.png" aria-hidden="true" alt="Banner Image">
+        <div id="app-container">
+
         </div>
         <div id="content">
             <section class="showcase-container" id="best-choices">
@@ -84,6 +52,19 @@
                 </div>
             </section>
             <script src="https://kit.fontawesome.com/ff85fda485.js" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+            <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+            <script src="app/header.jsx" type="text/babel"></script>
+            <script type="text/babel">
+                let root = ReactDOM.createRoot(document.getElementById("app-container"));
+                root.render(
+                    <div>
+                        <Header exclude="home"/>
+                        <Banner />
+                    </div>
+                );
+            </script>
         </div>
     </body>
 </html>
