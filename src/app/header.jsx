@@ -4,7 +4,7 @@
 class Header extends React.Component {
     render() {
         return <nav>
-            <a id="skip-link" tabindex="0" href="#content">Skip to content.</a>
+            <a id="skip-link" tabIndex="0" href="#content">Skip to content.</a>
             {/* Upper section, with logo and account btns */}
             <div id="upper-container">
                 <a display="block" href="index.html" id="logo-container">
@@ -25,24 +25,24 @@ class NavBar extends React.Component {
 
         //Add buttons, excluding whichever page we're already on
         if (this.props.exclude !== "home")
-            buttons.push(<a href="index.html" class="nav-button">Home</a>);
+            buttons.push(<a key="home" href="index.html" className="nav-button">Home</a>);
 
         if (this.props.exclude !== "about")
-            buttons.push(<a href="about-us.html" class="nav-button">About Us</a>);
+            buttons.push(<a key="about" href="about-us.html" className="nav-button">About Us</a>);
 
         if (this.props.exclude !== "shop")
-            buttons.push(<a href="shop.html" class="nav-button">Shop</a>);
+            buttons.push(<a key="shop" href="shop.html" className="nav-button">Shop</a>);
 
         if (this.props.exclude !== "subscribe")
-            buttons.push(<a href="subscription.html" class="nav-button">Subscription</a>);
+            buttons.push(<a key="subscribe" href="subscription.html" className="nav-button">Subscription</a>);
 
         if (this.props.exclude !== "locations")
-            buttons.push(<a href="map.html" class="nav-button">Locations</a>);
+            buttons.push(<a key="locations" href="map.html" className="nav-button">Locations</a>);
         
         return <div id="page-buttons">
-            <div class="flex-dummy"></div>
+            <div className="flex-dummy"></div>
             {buttons}
-            <div class="flex-dummy"></div>
+            <div className="flex-dummy"></div>
         </div>
     }
 }
@@ -53,16 +53,16 @@ class Toolbox extends React.Component {
     render() {
         return <div id="tools">
             <a href="search.html">
-                <i aria-hidden="true" class="fas fa-magnifying-glass" title="Search"></i>
-                <span class="sr-only">Search</span>
+                <i aria-hidden="true" className="fas fa-magnifying-glass" title="Search"></i>
+                <span className="sr-only">Search</span>
             </a>
             <a href="account.html">
-                <i aria-hidden="true" class="fas fa-user" title="My Account"></i>
-                <span class="sr-only">Account</span>
+                <i aria-hidden="true" className="fas fa-user" title="My Account"></i>
+                <span className="sr-only">Account</span>
             </a>
             <a href="cart.html">
-                <i aria-hidden="true" class="fas fa-cart-shopping" title="My Cart"></i>
-                <span class="sr-only">My Cart</span>
+                <i aria-hidden="true" className="fas fa-cart-shopping" title="My Cart"></i>
+                <span className="sr-only">My Cart</span>
             </a>
         </div>
     }
@@ -72,8 +72,18 @@ class Toolbox extends React.Component {
  */
 class Banner extends React.Component {
     render() {
+        document.addEventListener("scroll", update_banner.bind("banner"))
         return <div id="banner">
             <img src="../images/Banner.png" aria-hidden="true" alt="Banner Image" />
         </div>
+    }
+}
+
+function update_banner() {
+    let banner = document.getElementById(this);
+    console.log(banner.offsetTop);
+    if (banner !== null) {
+        let image = banner.children[0];
+        image.style.height = banner.offsetTop + "px";
     }
 }
