@@ -2,14 +2,6 @@
 export default function Shop(){
     return (
         <div>
-            <div id="page-buttons">
-                <div class="flex-dummy"></div>
-                <a href="index.html" class="nav-button">Home</a>
-                <a href="about-us.html" class="nav-button">About Us</a>
-                <a href="subscription.html" class="nav-button">Subscription</a>
-                <a href="map.html" class="nav-button">Locations</a>
-                <div class="flex-dummy"></div>
-            </div>
             <div>
                 <section class="showcase-container" id="Azetec-Bean">
                     <div class="item-showcase">
