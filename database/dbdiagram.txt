@@ -15,6 +15,22 @@ Table AdministratorPermission {
     (username, permission) [pk]
   }
 }
+Table Log {
+  description text
+  user varchar [ref: > User.username]
+  order int [ref: > Order.order_id]
+  item int [ref: > Item.item_id]
+  log_date datetime
+}
+Table SessionCookie {
+  username varchar [ref: > User.username]
+  cookie varchar
+  expires datetime
+
+  Indexes {
+    (username, cookie) [pk]
+  }
+}
 Table User {
   username varchar [pk]
   register_date datetime
