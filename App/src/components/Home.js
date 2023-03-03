@@ -1,18 +1,7 @@
 import React from "react";
-export default function Home(){
+import { ItemShowcase } from "./ItemShowcase";
 
-    class ItemShowcase extends React.Component {
-        render() {
-            return <div className="item-showcase">
-                    <h1 className="section-header">{this.props["title"]}</h1>
-                    <img src={this.props["image-src"]} alt={this.props["alt"]} className="item-image"/>
-                    <p className="section-boldline">{this.props["boldline"]}</p>
-                    <p className="section-text">
-                    {this.props["content"]}
-                    </p>
-                </div>
-        }
-    }
+export default function Home(){
 
     var lipsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore
