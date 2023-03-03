@@ -1,18 +1,7 @@
 const express = require("express");
 
-//Community mysql is callback based, this provides
-//a promise-based API which is easier on my monkey brain
-const mysql = require("promise-mysql");
-
-//Throw if connection failed, unwrap the connection if successful.
-var con = await mysql.createConnection({
-    host: "mysql://localhost:3306",
-    user: "admin",
-    // No one will ever guess this password stored in a public GitHub!!
-    password: "ReallyCoolSecurePassword!123"
-});
-
-
+//Internal abstractions for interfacting with the DB
+const queries = require("./queries");
 
 const PORT = env.PORT ?? 3001;
 
@@ -26,7 +15,7 @@ app.use(express.json());
 //// Register routes
 // Get list of items in shop
 app.get("/shopitems", (req, res) => {
-
+    res.json(queries.getItems(con));
 });
 // Get the user's cart
 app.get("/cart", (req, res) => {
@@ -42,7 +31,7 @@ app.post("/login", (req, res) => {
 });
 // Create/Modify account
 app.post("/account", (req, res) => {
-
+    
 });
 // Submit order
 app.post("/checkout", (req, res) => {
