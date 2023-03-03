@@ -6,7 +6,8 @@ HTML Lads Ecommerce Site for CSCD 378
 This is a react app created using create-react-app.
 
 * In your terminal of choice, navigate to the root folder, `.../EcommerceSite/App`
-* With npm installed, execute `npm start`
+* With npm installed, execute `npm insall react-scripts` to fetch the necessary Node components.
+* Inside the App directory, execute `npm start` to run the local server.
 * In your browser, navigate to `http://localhost:3000/` if it doesn't automatically open
 
 ## Accessibility Features
