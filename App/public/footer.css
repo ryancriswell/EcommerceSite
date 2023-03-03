@@ -17,8 +17,21 @@ footer {
 	bottom:0;
 	left:0;
 	display: grid;
-    padding: 0px 50px 50px 50px;
+    padding: 0px 50px;
 	grid-template-columns: 25% 25% 25% 25%;
+}
+footer small {
+    /* Make legal fineprint float bottom */
+    position:absolute;
+    bottom:0;
+    padding: 20px;
+}
+.footer-section {
+    padding: 0px 50px;
+}
+/*Dash the right side of sections, except the last*/
+.footer-section:not(:last-child) {
+    border-right: 1px dashed white;
 }
 .footer-section h2 {
     font-size: 190%;
