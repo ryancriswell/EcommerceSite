@@ -2,12 +2,12 @@
 export default function Home(){
     return(
         <div id="content">
-            <section class="showcase-container" id="best-choices">
-                <div class="item-showcase">
-                    <h1 class="section-header">Top Review</h1>
-                    <img src="../images/Mocha Bag.png" alt="Mocha Bean coffee" class="item-image"/>
-                    <p class="section-boldline">Tod Smith</p>
-                    <p class="section-text">
+            <section className="showcase-container" id="best-choices">
+                <div className="item-showcase">
+                    <h1 className="section-header">Top Review</h1>
+                    <img src="../images/Mocha Bag.png" alt="Mocha Bean coffee" className="item-image"/>
+                    <p className="section-boldline">Tod Smith</p>
+                    <p className="section-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Lacus vestibulum sed arcu non
@@ -16,10 +16,10 @@ export default function Home(){
                     </p>
                 </div>
                 <div id="item-showcase">
-                    <h1 class="section-header">Owner's Choice</h1>
-                    <img src="../images/Robusta-Bean.png" alt="Robusta Bean coffee" class="item-image"/>
-                    <p class="section-boldline">The Lads Favorite</p>
-                    <p class="section-text">
+                    <h1 className="section-header">Owner's Choice</h1>
+                    <img src="../images/Robusta-Bean.png" alt="Robusta Bean coffee" className="item-image"/>
+                    <p className="section-boldline">The Lads Favorite</p>
+                    <p className="section-text">
                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Lacus vestibulum sed arcu non
@@ -28,19 +28,19 @@ export default function Home(){
                     </p>
                 </div>
             </section>
-            <section class="showcase-container" id="top-sellers">
-                <h1 class="section-header">Top Sellers</h1>
-                <div class="item-showcase">
-                    <h1 class="section-header">1.</h1>
-                    <img src="../images/Aztec-Bean.png" alt="Aztec Bean coffee" class="item-image"/>
+            <section className="showcase-container" id="top-sellers">
+                <h1 className="section-header">Top Sellers</h1>
+                <div className="item-showcase">
+                    <h1 className="section-header">1.</h1>
+                    <img src="../images/Aztec-Bean.png" alt="Aztec Bean coffee" className="item-image"/>
                 </div>
-                <div class="item-showcase">
-                    <h1 class="section-header">2.</h1>
-                    <img src="../images/Brazil-Beans.png" alt="Brazil Bean coffee" class="item-image"/>
+                <div className="item-showcase">
+                    <h1 className="section-header">2.</h1>
+                    <img src="../images/Brazil-Beans.png" alt="Brazil Bean coffee" className="item-image"/>
                 </div>
-                <div class="item-showcase">
-                    <h1 class="section-header">3.</h1>
-                    <img src="../images/TheClassic-Bean.png" alt="The Classic Bean coffee" class="item-image"/>
+                <div className="item-showcase">
+                    <h1 className="section-header">3.</h1>
+                    <img src="../images/TheclassNameic-Bean.png" alt="The classNameic Bean coffee" className="item-image"/>
                 </div>
             </section>
         </div>

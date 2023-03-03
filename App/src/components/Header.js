@@ -63,6 +63,7 @@ export default function Header(){
     }
 
     return (
+        <>
         <nav>
             <a id="skip-link" tabIndex="0" href="#content">Skip to content.</a>
             {/* Upper section, with logo and account btns */}
@@ -74,5 +75,7 @@ export default function Header(){
             </div>
             {NavBar()}
         </nav>
+        {Banner()}
+        </>
     );
 }
