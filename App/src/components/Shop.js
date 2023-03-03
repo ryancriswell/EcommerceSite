@@ -1,64 +1,41 @@
+import React from "react";
+import { ItemShowcase } from "./ItemShowcase";
 
 export default function Shop(){
+
+    class AddToCart extends React.Component {
+        render() {
+            return <div>
+                <button>
+                    <span className="add-to-cart">Add To cart</span>
+                </button>
+            </div>
+        }
+    }
+    class Item extends ItemShowcase {
+        render() {
+            return <div>
+                {super.render()}
+                <AddToCart />
+            </div>                        
+        }
+    }
+
     return (
         <div>
             <div>
                 <section className="showcase-container" id="Azetec-Bean">
-                    <div className="item-showcase">
-                        <h1 className="section-header">Azetec Bean</h1>
-                        <img src="../images/Aztec-Bean.png" alt="Azetec Bean coffee" className="item-image" width="500"/>
-                        <p className="section-text"></p>
-                        <div>
-                            <button>
-                                <span className="add-to-cart">Add To cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="item-showcase">
-                        <h1 className="section-header">Brazil Bean</h1>
-                        <img src="../images/Brazil-Beans.png" alt="Brazil Bean coffee" className="item-image" width="500"/>
-                        <p className="section-text"></p>
-                        <div>
-                            <button>
-                                <span className="add-to-cart">Add To cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="item-showcase">
-                        <h1 className="section-header">Mocha Bag</h1>
-                        <img src="../images/Mocha Bag.png" alt="Mocha Bag" className="item-image" width="500"/>
-                        <p className="section-text"></p>
-                        <div>
-                            <button>
-                                <span className="add-to-cart">Add To cart</span>
-                            </button>
-                        </div>
-                    </div>
+                    <Item image-src="../images/Aztec-Bean.png" title="Aztec Bean" />
+                    <Item image-src="../images/Brazil-Beans.png" title="Brazil Bean" />
+                    <Item image-src="../images/Mocha Bag.png" title="Mocha Bag" />
                 </section>
                 <section className="showcase-container" id="Robusta-Bean">
-                    <div className="item-showcase">
-                        <h1 className="section-header">Robusta Bean</h1>
-                        <img src="../images/Robusta-Bean.png" alt="Robusta Bean coffee" className="item-image" width="500"/>
-                        <p className="section-text"></p>
-                        <div>
-                            <button>
-                                <span className="add-to-cart">Add To cart</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="item-showcase">
-                        <h1 className="section-header">Owner's Choice</h1>
-                        <img src="../images/TheclassNameic-Bean.png" alt="The classNameic Bean coffee" className="item-image" width="500"/>
-                        <p className="section-text"></p>
-                        <div>
-                            <button>
-                                <span className="add-to-cart">Add To cart</span>
-                            </button>
-                        </div>
-                    </div>
+                    <Item image-src="../images/Colombia-Bean.png" title="Colombia Bean" />
+                    <Item image-src="../images/Eagle-Bean.png" title="Eagle Bean" />
+                    <Item image-src="../images/Decaf.png" title="Decaf Beans" />
                 </section>
                 <section className="showcase-container" id="top-sellers">
-                </section><script src="https://kit.fontawesome.com/ff85fda485.js" crossorigin="anonymous"></script>    
+                </section>
             </div>
         </div>
     );
