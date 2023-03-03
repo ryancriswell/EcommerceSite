@@ -1,8 +1,13 @@
-const mysql = require("mysql");
+const mysql = require("promise-mysql");
+
+function parseSqlJson(result) {
+    
+}
 
 function getItems(con) {
     
 }
-function executeGetJson(con, query) {
-    con.query(query, )
+async function executeGetJson(con, query) {
+    return con.query(query)
+        .then(parseSqlJson);
 }
