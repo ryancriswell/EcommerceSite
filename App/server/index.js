@@ -3,7 +3,7 @@ const express = require("express");
 //Internal abstractions for interfacting with the DB
 const queries = require("./queries");
 
-const PORT = env.PORT ?? 3001;
+const PORT = /* env.PORT ?? */ 3001;
 
 //// Create an app
 const app = express();
@@ -15,7 +15,9 @@ app.use(express.json());
 //// Register routes
 // Get list of items in shop
 app.get("/shopitems", (req, res) => {
-    res.json(queries.getItems(con));
+    let json = queries.getItems(null);
+    console.log(json);
+    res.json(json);
 });
 // Get the user's cart
 app.get("/cart", (req, res) => {
