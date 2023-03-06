@@ -210,3 +210,167 @@ button {
     font-size: 1.5vw;
     padding-bottom: 40px;
 }
+
+/* ========================= Subscription ============================ */
+.subscription{
+    margin: 5vw;
+    transform: translate(0px 100px);
+}
+
+.subscription-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.subscription-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.subscription h1{
+    font-size: 3vw;
+    padding: 0px 10vw 0px 0px;
+    margin: 15px;
+
+}
+
+.subscription h2{
+    font-size: 3vw;
+
+}
+
+.subscription h3{
+    font-size: 2vw;
+}
+
+.subscription h4{
+    font-size: 1vw;
+    text-align: center;
+}
+
+#subscription-wrapper{
+    background-color: #faf0e6;
+}
+
+#subscription-title{
+    text-align: right;
+    font-size: 4vw;
+    margin-top: 2vw;
+}
+
+#subscription-second-title{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 2vw;
+}
+
+#subscription-body{
+    text-align: left;
+    padding: 0px 0vw 0px 0px;
+    font-size: 2vw;
+
+}
+
+.subscription hr{
+    height: 2px;
+    background: black;
+    margin-bottom: 25px;
+}
+
+.subscription-icons{
+    width: 50px;  
+    height: 50px;  
+}
+
+/* ========================= Login ============================ */
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #3c2a21;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.login-background-fullscreen{
+    background-image: url("../images/Login-Background.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.loginbox h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #857658;
+    background-color: transparent;
+    outline: none;
+    height: 40px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #857658;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: #A5BE7E;
+    color: #000000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: orange;
+    text-align: left;
+}
+
+.loginbox a:hover{
+    cursor: pointer;
+    color: orangered;
+}
