@@ -213,7 +213,8 @@ button {
 
 /* ========================= Subscription ============================ */
 .subscription{
-    margin: 5vw;
+    margin: 0;
+    margin-top: 145px;
     transform: translate(0px 100px);
 }
 
@@ -223,73 +224,77 @@ button {
     flex-wrap: wrap;
     width: 100%;
   }
-  
 .subscription-column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
 }
-
 .subscription h1{
-    font-size: 3vw;
-    padding: 0px 10vw 0px 0px;
-    margin: 15px;
-
+    margin-right: 400px;
 }
-
-.subscription h2{
-    font-size: 3vw;
-
-}
-
-.subscription h3{
-    font-size: 2vw;
-}
-
 .subscription h4{
     font-size: 1vw;
     text-align: center;
 }
-
-#subscription-wrapper{
-    background-color: #faf0e6;
-}
-
-#subscription-title{
-    text-align: right;
-    font-size: 4vw;
-    margin-top: 2vw;
-}
-
-#subscription-second-title{
-    text-align: center;
-    font-size: 2vw;
-    margin-top: 2vw;
-}
-
-#subscription-body{
-    text-align: left;
-    padding: 0px 0vw 0px 0px;
-    font-size: 2vw;
-
-}
-
 .subscription hr{
-    height: 2px;
+    margin-left: 240px;
+    margin-right: 240px;
+    height: 5px;
     background: black;
     margin-bottom: 25px;
 }
+.subscription section{
+    margin-bottom: 100px;
+}
+#subscription-wrapper{
+    background-color: #F3EFE0;
+}
+#subscription-title{
+    text-align: right;
+    font-size: 3vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+#subscription-second-title{
+    text-align: center;
+    font-size: 2vw;
+    color: #000000;
+}
+#subscription-body{
+    text-align: left;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    transform: translate(-220px, 30px);
 
+}
 .subscription-icons{
     width: 50px;  
     height: 50px;  
 }
 
+.subscription-image{
+    position: relative;
+    bottom: -110px;
+    width: 1100px;
+    margin-left: 45px;
+}
+.coffee-subscription-box{
+    width: 540px;
+    height: 800px;
+    background: #ded3c3;
+    position: relative;
+    left: -45px;
+    top: 20px;
+    margin-right: 97px;
+    margin-top: 70px;
+}
+
 /* ========================= Login ============================ */
 .loginbox{
     width: 320px;
-    height: 420px;
+    height: 470px;
     background: #3c2a21;
     color: #ffffff;
     top: 50%;
