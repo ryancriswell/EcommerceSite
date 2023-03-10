@@ -127,9 +127,7 @@ export default function subscription(){
                         </select>
                         <div/>
                         <a href="/account">
-                            <button id="submit-button">
-                            Submit
-                            </button>
+                            <button id="submit-button">Submit</button>
                         </a>
                     </center>
                 </div>
