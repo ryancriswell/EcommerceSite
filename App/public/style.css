@@ -147,20 +147,6 @@ nav {
 }
 
 
-
-button {
-    background-color: #857658;
-    color: #000000;
-    border: none;
-    font-size: 1.1rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    width: 200px;
-    height: 45px;
-    overflow: hidden;
-    position: relative;
-    outline: none;
-}
 /* ========================= About Us ============================ */
 .aboutus--row {
     display: flex;
@@ -211,31 +197,22 @@ button {
     padding-bottom: 40px;
 }
 
+
 /* ========================= Subscription ============================ */
 .subscription{
     margin: 0;
-    margin-top: 145px;
     transform: translate(0px 100px);
 }
-
-.subscription-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-.subscription-column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-}
-.subscription h1{
-    margin-right: 400px;
+.subscription h3{
+    margin: 0px;
 }
 .subscription h4{
-    font-size: 1vw;
-    text-align: center;
+    font-size: 1.24vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
 }
 .subscription hr{
     margin-left: 240px;
@@ -244,22 +221,46 @@ button {
     background: black;
     margin-bottom: 25px;
 }
-.subscription section{
-    margin-bottom: 100px;
+
+.subscription-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+.subscription-second-row{
+    display: flex;
+    flex-direction: row;
+    margin-left: 410px;
+    margin-top: -50px;
+}
+.subscription-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
 }
 #subscription-wrapper{
     background-color: #F3EFE0;
+    margin-bottom: 100px;
 }
 #subscription-title{
     text-align: right;
     font-size: 3vw;
     margin-top: 4vw;
     margin-bottom: 4vw;
+    margin-right: 400px;
 }
 #subscription-second-title{
     text-align: center;
     font-size: 2vw;
     color: #000000;
+}
+#subscription-third-title{
+    text-align: center;
+    font-size: 1.78vw;
+    color: #000000;
+    margin-bottom: 20px;
 }
 #subscription-body{
     text-align: left;
@@ -267,29 +268,141 @@ button {
     margin-top: 4vw;
     margin-bottom: 4vw;
     transform: translate(-220px, 30px);
-
 }
+
 .subscription-icons{
-    width: 50px;  
-    height: 50px;  
+    width: 60px;  
+    height: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-
 .subscription-image{
     position: relative;
     bottom: -110px;
     width: 1100px;
     margin-left: 45px;
 }
+
+
 .coffee-subscription-box{
-    width: 540px;
-    height: 800px;
+    width: auto;
+    height: auto;
     background: #ded3c3;
-    position: relative;
-    left: -45px;
-    top: 20px;
-    margin-right: 97px;
-    margin-top: 70px;
+    margin-right: 160px;
 }
+#coffee-subscription-logo{
+    width: 100px;
+    height: 100px;
+    margin-top: -30px;
+    margin-bottom: -0px;
+}
+#coffee-subscription-choice-descriptors{
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    margin-left: 120px;
+    margin-right: -40px
+}
+.coffee-subscription-box label{
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.coffee-subscription-box select{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 30px;
+    outline: #000000;
+    cursor: pointer;
+    border-color: #000000;
+    border-width: 2px;
+}
+.coffee-subscription-box option{
+    font-size: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.coffee-subscription-box p{
+    margin: 0;
+}
+
+.coffee-subscription-box img{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+.coffee-subscription-button{
+    background-color: #F3EFE0;;
+    color: #000000;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ 
+.active, .coffee-subscription-button:hover{
+    background-color: #c5987f;
+    color: #000000;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#bags{
+    height: 40px;
+    width: 240px;
+    color: black;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:#ded3c3;
+    border-radius: 20px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#sub-length{
+    height: 40px;
+    width: 300px;
+    color: black;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:#ded3c3;
+    border-radius: 6px;
+    margin-right: 30px;
+}
+
+#submit-button{
+    height: 40px;
+    width: 300px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(138, 117, 91);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+#submit-button:hover{
+    height: 40px;
+    width: 300px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(91, 138, 103);
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
 
 /* ========================= Login ============================ */
 .loginbox{
