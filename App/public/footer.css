@@ -1,0 +1,67 @@
+html {
+    --footer-color: #3c2a21;
+}
+footer {
+    position:relative;
+    z-index: 100;
+    box-shadow: 0px -10px 50px white;
+    border-image-source: url("../images/triangle.png");
+    border-style: solid;
+    border-image-repeat: repeat;
+    border-image-width: 32px 0px 0px 0px;
+    border-image-outset: 32px;
+    border-image-slice: 32;
+    margin-top: 0px;
+    background-color: var(--footer-color);
+    color: white;
+	bottom:0;
+	left:0;
+	display: grid;
+    padding: 0px 50px;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+footer small {
+    /* Make legal fineprint float bottom */
+    position:absolute;
+    bottom:0;
+    padding: 20px;
+}
+.footer-section {
+    padding: 0px 50px;
+}
+/*Dash the right side of sections, except the last*/
+.footer-section:not(:last-child) {
+    border-right: 1px dashed white;
+}
+.footer-section h2 {
+    font-size: 190%;
+	text-decoration: underline;
+	text-decoration-style: dashed;
+}
+.footer-section li {
+	list-style-type: "\2731";
+}
+.footer-section li > a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+    font-size: x-large;
+
+    transition-property: padding-left;
+    transition-duration: 0.5s;
+}
+.footer-section li > a:hover {
+    text-decoration: none;
+    padding-left: 20px;
+    color: white;
+    font-size: x-large;
+}
+@media(prefers-reduced-motion: reduce) {
+    .footer-section li > a {
+        transition-property: none !important;
+    }
+    .footer-section li > a:hover {
+        padding-left: 10px;
+        text-decoration: underline;
+    }
+}

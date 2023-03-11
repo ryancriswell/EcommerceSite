@@ -3,11 +3,12 @@ HTML Lads Ecommerce Site for CSCD 378
 
 ## Running
 
-This is a React app, however we currently use on-the-fly jsx compilation via Babel for ease of development. This still requires a local http server of your choice, for simplicity I use Python http.server. There is nothing python-specific about our app, and any method of hosting the root `EcommerceSite` folder locally will work.
+This is a react app created using create-react-app.
 
-* In your terminal of choice, navigate to the root folder, `EcommerceSite`
-* With python3 installed, execute `python -m http.server` (http.server is an included module and does not need to be installed separately)
-* In your browser, navigate to `http://localhost:8000/src/index.html`
+* In your terminal of choice, navigate to the root folder, `.../EcommerceSite/App`
+* With npm installed, execute `npm insall react-scripts` to fetch the necessary Node components.
+* Inside the App directory, execute `npm start` to run the local server.
+* In your browser, navigate to `http://localhost:3000/` if it doesn't automatically open
 
 ## Accessibility Features
 

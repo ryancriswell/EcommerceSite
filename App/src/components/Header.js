@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Cart from './Cart'
 /**
  * Full Header, including logo, account buttons, nav bar, and banner - common to each page
  */
@@ -55,12 +54,16 @@ export default function Header(){
                     <i aria-hidden="true" className="fas fa-user" title="My Account"></i>
                     <span className="sr-only">Account</span>
                 </a>
-                <Cart/>
+                <a href="cart">
+                    <i aria-hidden="true" className="fas fa-cart-shopping" title="My Cart"></i>
+                    <span className="sr-only">My Cart</span>
+                </a>
             </div>
         );
     }
 
     return (
+        <>
         <nav>
             <a id="skip-link" tabIndex="0" href="#content">Skip to content.</a>
             {/* Upper section, with logo and account btns */}
@@ -72,5 +75,7 @@ export default function Header(){
             </div>
             {NavBar()}
         </nav>
+        {Banner()}
+        </>
     );
 }

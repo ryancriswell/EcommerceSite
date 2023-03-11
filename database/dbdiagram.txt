@@ -1,0 +1,83 @@
+//// Work in progress database schema, including subscriptions and Administrator permissions and basic access logging.
+//// View at https://dbdiagram.io/database
+
+Table Administrator {
+  username varchar [ref: > User.username]
+  last_accessed datetime
+  Indexes {
+    (username) [pk]
+  }
+}
+Table AdministratorPermission {
+  username varchar [ref: > Administrator.username]
+  permission varchar
+  Indexes {
+    (username, permission) [pk]
+  }
+}
+Table Log {
+  description text
+  user varchar [ref: > User.username]
+  order int [ref: > Order.order_id]
+  item int [ref: > Item.item_id]
+  log_date datetime
+}
+Table SessionCookie {
+  username varchar [ref: > User.username]
+  cookie varchar
+  expires datetime
+
+  Indexes {
+    (username, cookie) [pk]
+  }
+}
+Table User {
+  username varchar [pk]
+  register_date datetime
+  salt int
+  password_hash varchar
+}
+Table CustomerPayment {
+  customer varchar [ref: > User.username]
+  card_number char(16)
+  full_name varchar
+  security_code char(3)
+  Indexes {
+    (customer, card_number) [pk]
+  }
+}
+Table CustomerShipping {
+  customer varchar [ref: > User.username]
+  state varchar
+  addr_line_1 varchar
+  addr_line_2 varchar
+  zip char(5)
+  Indexes {
+    (customer, state, addr_line_1, addr_line_2, zip) [pk]
+  }
+}
+Table Item {
+  item_id int [pk]
+  item_name varchar
+  item_description text
+  price double
+  in_stock int
+}
+Table Order {
+  order_id int [pk]
+  customer varchar [ref: > User.username]
+}
+Table OrderItem {
+  order_id int [ref: > Order.order_id]
+  item_id int [ref: > Item.item_id]
+  quantity int
+  Indexes {
+    (order_id, item_id) [pk]
+  }
+}
+Table RecurringOrder {
+  order_id int [ref: > Order.order_id]
+  recur_period_days int
+  first_date date
+  final_date date
+}
