@@ -26,7 +26,7 @@ export default function Shop() {
 
     // Request the list of items from the server
     React.useEffect(() => {
-        fetch("http://localhost:3001/shopitems")
+        fetch("/shopitems")
           .then((res) => res.json())
           .then((data) => setData(data.message));
       }, []);

@@ -21,6 +21,7 @@ var con = mysql.createConnection({
 
 app.get("/shopitems", (req, res) => {
     res.json({ message: "Hello from server!" });
+
 });
 
 
