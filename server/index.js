@@ -1,9 +1,6 @@
 const express = require("express");
-import queries from './queries'
+const queries = require('./queries');
 
-
-//Internal abstractions for interfacting with the DB
-const queries = require("./queries");
 
 const PORT = process.env.PORT || 3001;
 
