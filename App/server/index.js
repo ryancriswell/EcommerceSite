@@ -3,7 +3,7 @@ const express = require("express");
 //Internal abstractions for interfacting with the DB
 const queries = require("./queries");
 
-const PORT = process.env.PORT ?? 3001;
+const PORT = process.env.PORT || 3001;
 
 //// Create an app
 const app = express();
@@ -15,15 +15,22 @@ var con = mysql.createConnection({
     host: "mysql://localhost:3306",
     user: "admin",
     // No one will ever guess this password stored in a public GitHub!!
-    password: "ReallyCoolSecurePassword!123"
+    password: "ReallyCoolSecurePassword!123" // this is the pass for root lol
 });
 */
 
+app.get("/shopitems", (req, res) => {
+    res.json({ message: "Hello from server!" });
+});
 
 
+app.listen(PORT, () => {
+    console.log("Listening on port" + PORT);
+});
 
 //// Register routes
 // Get list of items in shop
+/*
 app.get("/shopitems", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
@@ -51,3 +58,4 @@ app.post("/checkout", (req, res) => {
 
 //// Begin listening on our API port...
 app.listen(PORT, () => console.log(`Now listening on ${PORT}...`));
+*/
