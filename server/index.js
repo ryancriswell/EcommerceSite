@@ -1,4 +1,6 @@
 const express = require("express");
+import queries from './queries'
+
 
 //Internal abstractions for interfacting with the DB
 const queries = require("./queries");
@@ -10,28 +12,10 @@ const app = express();
 // Include JSON parsing capabilities, our API will be JSON based.
 app.use(express.json());
 
-/*
-var con = mysql.createConnection({
-    host: "mysql://localhost:3306",
-    user: "admin",
-    // No one will ever guess this password stored in a public GitHub!!
-    password: "ReallyCoolSecurePassword!123" // this is the pass for root lol
-});
-*/
-
-app.get("/shopitems", (req, res) => {
-    res.json({ message: "Hello from server!" });
-
-});
-
-
-app.listen(PORT, () => {
-    console.log("Listening on port" + PORT);
-});
 
 //// Register routes
 // Get list of items in shop
-/*
+
 app.get("/shopitems", (req, res) => {
     res.json({ message: "Hello from server!" });
 });
@@ -59,4 +43,3 @@ app.post("/checkout", (req, res) => {
 
 //// Begin listening on our API port...
 app.listen(PORT, () => console.log(`Now listening on ${PORT}...`));
-*/
