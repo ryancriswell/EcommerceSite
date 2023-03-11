@@ -14,12 +14,17 @@ connection.connect((err) => {
 });
 
 //execute some queries
-connection.query('SELECT * FROM user', (err,rows) => {
-    if(err) throw err;
-  
-    console.log('Data received from Db:');
-    console.log(rows);
-  });
+function getUsers(){
+    
+    connection.query('SELECT * FROM user', (err,rows) => {
+        if(err) throw err;
+      
+        console.log('Data received from Db:');
+        console.log(rows);
+      });
+
+}
+
 
 
 
