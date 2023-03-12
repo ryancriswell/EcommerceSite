@@ -15,7 +15,18 @@ export default function Footer() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        //choose what to do with the input data: email: "" and feedback: ""
         console.log(inputs);
+
+
+    // Request the list of items from the server
+        fetch("/email", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(inputs)
+        })
+     
     }
 
 
