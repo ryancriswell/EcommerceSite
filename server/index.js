@@ -45,18 +45,17 @@ app.post("/cart", (req, res) => {
 app.post("/login", (req, res) => {
 
 });
-//need to add the email and feedback!
+//updates the table users with a null user other then the email!
 app.post("/email", (req, res) => {
 
-    // let data = {name: req.body.name};
-    let sql = `select * from user `;
-    console.log(req.body.message);
-    //console.log(res);
+    //these are the data fields from the req
+    let email = JSON.stringify(req.body.email);
+    let feedback = JSON.stringify(req.body.feedback);
+    
+    let sql = `INSERT INTO user (user_id , username, register_date, salt, password_hash,email) VALUES (user_id, null, null, null, null, ${email})`;
     connection.query(sql, (err, result) => {
         if(err) throw err;
-        
         console.log(result);
-
     });
 
 });
