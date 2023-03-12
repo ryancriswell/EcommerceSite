@@ -15,13 +15,22 @@ connection.connect((err) => {
 
 //execute some queries
 function getUsers(){
-    
     connection.query('SELECT * FROM user', (err,rows) => {
         if(err) throw err;
       
         console.log('Data received from Db:');
         console.log(rows);
       });
+}
+function addFormEmail(req){
+    let data = {name: req.body.name};
+    let sql = `INSERT INTO user (user_id , username, register_date, salt, password_hash,email) VALUES (user_id, null, null, null, null, ${req.body.name}) `;
+    let query = connection.query(sql, data, (err, result) => {
+        if(err) throw err;
+        res.send
+
+    });
+
 
 }
 
