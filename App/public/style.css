@@ -210,3 +210,40 @@ button {
     font-size: 1.5vw;
     padding-bottom: 40px;
 }
+
+/* ========================= Locations ============================ */
+#locations--title{
+    text-align: center;
+}
+
+.locations--subtitle{
+    text-align: center;
+}
+
+.locations--text{
+    max-width: 200px;
+    text-align: center;
+}
+
+.locations--row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    column-gap: 150px;
+  }
+  
+.locations--column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+#google-map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
