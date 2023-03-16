@@ -2,17 +2,12 @@ import React from "react";
 import { ItemShowcase } from "./ItemShowcase";
 
 export default function Shop(props){
-    function handleClick(title){
-        this.props.setCartState(previousState => ({
-            cartItems: [...previousState.cartItems, title]
-        }))
-    }
 
     class AddToCart extends React.Component {
 
         render() {
             return <div>
-                <button onClick={() => handleClick(this.props.title)}>
+                <button>
                     <span className="add-to-cart">Add To cart</span>
                 </button>
             </div>
