@@ -6,6 +6,7 @@ import Shop from "./components/Shop";
 import Footer from "./components/Footer";
 import Locations from "./components/Locations";
 import {useCookieState} from "use-cookie-state";
+import Cart from "./components/Cart";
 
 import {Routes, Route} from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App(){
 return (
     <div>
       <Header/>
+      <Cart />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
