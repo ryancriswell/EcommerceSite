@@ -24,6 +24,10 @@
 #cart a {
     color: white;
 }
+#cart .cartTotalName {
+    font-style: italic;
+    text-align: right !important;
+}
 #cart h1 {
     color: white;
     margin : 0;
