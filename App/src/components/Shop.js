@@ -1,8 +1,12 @@
 import React from "react";
 import { ItemShowcase } from "./ItemShowcase";
 
-export default function Shop(props){
+export default function Shop(props){  
 
+    function handleClick(title){
+        props.cartItems[title] = (props.cartItems[title] + 1)
+    }
+    
     class AddToCart extends React.Component {
 
         render() {

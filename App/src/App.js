@@ -5,12 +5,20 @@ import AboutUs from "./components/AboutUs";
 import Shop from "./components/Shop";
 import Footer from "./components/Footer";
 import Locations from "./components/Locations";
-import {useCookieState} from "use-cookie-state";
 import Cart from "./components/Cart";
+import React from "react";
 
 import {Routes, Route} from "react-router-dom";
 
 function App(){
+    const [cartItems, setCartItems] = React.useState(    
+      {"Aztec Bean": 0,
+      "Brazil Bean": 0,
+      "Mocha Bag": 0,
+      "Columbia Bean": 0,
+      "Eagle Bean": 0,
+      "Decaf Bean": 0}
+    );
 return (
     <div>
       <Header/>
@@ -18,7 +26,7 @@ return (
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
-        <Route path="/shop" element={<Shop />}/>
+        <Route path="/shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems} />}/>
         <Route path="/locations" element={<Locations/>}/>
         {/* ADD MORE ROUTES HERE!! */}
       </Routes>
