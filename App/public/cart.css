@@ -33,24 +33,34 @@
     transform: translate(0%, 0%);
 }
 #cart table, #cart th, #cart td {
+    font-weight: bolder;
+    color:white;
     border-style: none;
     border-collapse: collapse;
+    padding: 5px;
+}
+#cartEmpty {
+    width: 100%;
+    font-size:larger;
+    font-style: italic;
+    color: white;
+    text-align: center;
 }
 #cart table {
     width: 100%;
 }
 #cart tr:first-child {
-    background-color: rgb(122, 159, 172);
+    background-color: #61503e;
     border-bottom: 2px double black;
 }
 #cart tr *:first-child {
     text-align: left;
 }
 #cart tr:nth-child(even) {
-    background-color: lightblue;
+    background-color: #8D7B68;
 }
 #cart tr {
-    background-color: white;
+    background-color: #A4907C;
 }
 #cart th {
     padding: 4px;
