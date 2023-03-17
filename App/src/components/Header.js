@@ -7,6 +7,7 @@ export default function Header(props){
 
     function NavBar() {
         let buttons = []
+        buttons.push(<a key="home" href="/" className="nav-button">Home</a>);
         buttons.push(<a key="about" href="/about-us" className="nav-button">About Us</a>);
         buttons.push(<a key="shop" href="/shop" className="nav-button">Shop</a>);
         buttons.push(<a key="subscribe" href="/subscription" className="nav-button">Subscription</a>);

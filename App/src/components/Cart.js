@@ -20,14 +20,22 @@ class CartItem extends React.Component {
 }
 class CartTotal extends React.Component {
     render() {
+
+        const tax = 1.08;
+        let total = 0.0;
+        for(let item of this.props.contents) {
+            total += item.quantity * item.price;
+        }
+        let totalTaxed = (total * tax).toFixed(2);
+        total = total.toFixed(2);
         return <>
-                <tr>
-                    <td className="cartTotalName">Total:</td>
-                    <td className="cartTotal">{this.props.total}</td>
+                <tr className="total">
+                    <td className="cartTotalName" colSpan={2}>Total:</td>
+                    <td className="cartTotal">{"$" + total}</td>
                 </tr>
-                <tr>
-                    <td className="cartTotalName">(+tax)</td>
-                    <td className="cartTotalWithTax">{this.props.totalWithTax}</td>
+                <tr className="total">
+                    <td className="cartTotalName" colSpan={2}>(+tax)</td>
+                    <td className="cartTotalWithTax">{"$" + totalTaxed}</td>
                 </tr>
             </>
     }
@@ -58,6 +66,7 @@ class CartTable extends React.Component {
                     <th class="quantity">Qty.</th>
                 </tr>
                 {rows}
+                <CartTotal contents={this.props.contents}/>
             </table>
         }
     }
@@ -98,7 +107,6 @@ export default function Cart(props) {
 
     let isEmpty = props.cartItems.length == 0;
 
-    const tax = 1.08;
     let checkout = () => alert("Stub! " + JSON.stringify(props.cartItems));
     let cancel = () => props.setCartItems({});
 
