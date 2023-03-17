@@ -1,7 +1,14 @@
 import React from "react";
 
 export default function Footer() {
-
+    let cartHandler = (event) => {
+        event.preventDefault();
+        props.setCartShown(!props.cartShown)
+    }
+    let stub = (event) => {
+        event.preventDefault();
+        alert("Stub!");
+    }
 
     //email will be the email string that is entered into the box yay!
     const [inputs, setInputs] = React.useState({});
@@ -31,7 +38,7 @@ export default function Footer() {
 
 
 
-    return <footer>
+return <footer>
         <div className="footer-section">
             <h1>Keep in touch with us!</h1>
             {/* Small is used for legal fineprint */}
@@ -50,11 +57,12 @@ export default function Footer() {
         <div className="footer-section">
             <h2>Account</h2>
             <ul>
-                <li><a href="my-account">My Account</a></li>
-                <li><a href="cart">Cart</a></li>
+                <li><a href="my-account" onClick={stub}>My Account</a></li>
+                <li><a href="cart" onClick={cartHandler}>Cart</a></li>
             </ul>
         </div>
         <div className="footer-section">
+            <h2>Send us your thoughts</h2>
             <h2>Send us your thoughts</h2>
             <form id="emailForm" onSubmit={handleSubmit}>
                 <label htmlFor="feedback-email">Email (required)</label>

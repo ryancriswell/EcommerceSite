@@ -62,6 +62,16 @@ Create Table Item (
   in_stock int UNSIGNED,
   CHECK(price >= 0.0)
 );
+INSERT INTO Item (item_id , item_name, item_description, price, in_stock) VALUES
+(1, 'Aztec Bean', 'Cool beans', 10.99 , 10),
+(2, 'Brazil Bean', 'reallyt cool bean', 10.99, 10),
+(3, 'Mocha Bag','Chocolate beans', 10.99, 10),
+(4, 'Colombia Bean','Beans from Colombia', 10.99, 10),
+(5, 'Eagle Bean','Caramel Beans' , 10.99, 10);
+(6, 'Decaf Beans', 'No Buzz Beans', 10.99, 10);
+
+
+
 Create Table UserOrder (
   order_id int primary key AUTO_INCREMENT,
   user_id int,

@@ -51,13 +51,18 @@ app.post("/email", (req, res) => {
     //these are the data fields from the req
     let email = JSON.stringify(req.body.email);
     let feedback = JSON.stringify(req.body.feedback);
-    
+
+    if(email == null || email == "") 
+    {console.log("No iinput email")}
+    else {
+
     let sql = `INSERT INTO user (user_id , username, register_date, salt, password_hash,email) VALUES (user_id, null, null, null, null, ${email})`;
     connection.query(sql, (err, result) => {
-        if(err) throw err;
+        if(err) throw(err);
         console.log(result);
     });
 
+  }
 });
 // Create/Modify account
 app.post("/account", (req, res) => {
@@ -65,7 +70,23 @@ app.post("/account", (req, res) => {
 });
 // Submit order
 app.post("/checkout", (req, res) => {
+    //handle order information: {Brazil Bean: 1, Aztec Bean: 1, Mocha Bag: 1}
+    console.log(req.body);
 
+    let orderInfo = req.body;
+
+
+
+    if(orderInfo != null || orderInfo != "" ){
+      let sql = null;
+      connection.query(sql, (err, result) => {
+        if(err) throw(err);
+        console.log(result);
+
+      });
+
+
+    }
 });
 
 

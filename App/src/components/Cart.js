@@ -107,8 +107,27 @@ export default function Cart(props) {
 
     let isEmpty = props.cartItems.length == 0;
 
-    let checkout = () => alert("Stub! " + JSON.stringify(props.cartItems));
+    // prop.cartItems returns -> {"Aztez Bean":1,"Brazil Bean": 1}
+    //let checkout = () => alert("Stub! " + JSON.stringify(props.cartItems));
+
     let cancel = () => props.setCartItems({});
+
+    const checkout = (event) => {
+        event.preventDefault();
+
+        //choose what to do with the input data: email: "" and feedback: ""
+        console.log(props.cartItems);
+
+
+    // Request the list of items from the server
+    
+        fetch("/checkout", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(props.cartItems)
+        })
+    
+    }
 
 
     return <div id="cart" className={props.cartShown ? "shown" : ""}>
