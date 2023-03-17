@@ -4,14 +4,17 @@ import { ItemShowcase } from "./ItemShowcase";
 export default function Shop(props){  
 
     function handleClick(title){
-        props.cartItems[title] = (props.cartItems[title] + 1)
+        let arr = {...props.cartItems};
+        arr[title] = ((props.cartItems[title] ?? 0) + 1)
+        console.log(props.cartItems);
+        props.setCartItems(arr);
     }
     
     class AddToCart extends React.Component {
 
         render() {
             return <div>
-                <button>
+                <button onClick={() => handleClick(this.props.title)}>
                     <span className="add-to-cart">Add To cart</span>
                 </button>
             </div>

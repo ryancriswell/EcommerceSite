@@ -34,38 +34,50 @@ class CartTotal extends React.Component {
 }
 class CartTable extends React.Component {
     render() {
-        return <table>
-            <tr>
-                <th class="item">Item</th>
-                <th class="price">Price</th>
-                <th class="quantity">Qty.</th>
-            </tr>
-            <tr>
-                <th>The cool beans</th>
-                <th>$10.00</th>
-                <th>2</th>
-            </tr>
-            <tr>
-                <th>Asdf</th>
-                <th>10.00</th>
-                <th>2</th>
-            </tr>
-            <tr>
-                <th>Asdf</th>
-                <th>10.00</th>
-                <th>2</th>
-            </tr>
-            <tr>
-                <th>Asdf</th>
-                <th>10.00</th>
-                <th>2</th>
-            </tr>
-        </table>
+        if (this.props.contents.length == 0) {
+            return <div id="cartEmpty">
+                <p>Empty - Grab some beans!</p>
+            </div>
+        } else {
+            let rows = [];
+
+            for(let item_key in this.props.contents) {
+                let item = this.props.contents[item_key];
+                rows.push(
+                    <tr key={item_key}>
+                        <td class="item">{item.itemName}</td>
+                        <td class="price">{"$" + item.price}</td>
+                        <td class="quantity">{item.quantity}</td>
+                    </tr>
+                );
+            }
+            return <table>
+                <tr>
+                    <th class="item">Item</th>
+                    <th class="price">Price</th>
+                    <th class="quantity">Qty.</th>
+                </tr>
+                {rows}
+            </table>
+        }
     }
 }
-export default function Cart() {
+export default function Cart(props) {
     const [shown, setShown] = React.useState(true);
-    /*TODO: Fetch cart list from DB*/
+
+    let itemList = [];
+
+    for(let item in props.cartItems) {
+        itemList.push(
+            {
+                itemName: item,
+                quantity: props.cartItems[item],
+                price: 10.99,
+            }
+        );
+    }
+
+    /*TODO: Fetch cart list from DB
     const itemList = [
         {
             imageSrc: "images/Aztec-Bean.png",
@@ -79,14 +91,19 @@ export default function Cart() {
             quantity: 1,
             price: 8.99,
         }
-    ];
+    ];*/
 
     const hide = (event) => {
         event.preventDefault();
         setShown(false);
     }
 
+    let isEmpty = props.cartItems.length == 0;
+
     const tax = 1.08;
+    let checkout = () => alert("Stub! " + JSON.stringify(props.cartItems));
+    let cancel = () => props.setCartItems({});
+
 
     return <div id="cart" className={shown ? "shown" : ""}>
         <h1>My Cart</h1>
@@ -95,8 +112,8 @@ export default function Cart() {
             <span className="sr-only">Close</span></a>
         <CartTable contents={itemList}/>
         <div class="buttons">
-            <button id="cart-checkout">Checkout</button>
-            <button id="cart-cancel">Cancel</button>
+            <button id="cart-checkout" disabled={isEmpty} onClick={checkout}>Checkout</button>
+            <button id="cart-cancel" disabled={isEmpty} onClick={cancel}>Cancel</button>
         </div>
     </div>
 }

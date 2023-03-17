@@ -12,17 +12,14 @@ import {Routes, Route} from "react-router-dom";
 
 function App(){
     const [cartItems, setCartItems] = React.useState(    
-      {"Aztec Bean": 0,
-      "Brazil Bean": 0,
-      "Mocha Bag": 0,
-      "Columbia Bean": 0,
-      "Eagle Bean": 0,
-      "Decaf Bean": 0}
+      {}
     );
+    console.log("uwu")
+
 return (
     <div>
       <Header/>
-      <Cart />
+      <Cart cartItems={cartItems} setCartItems={setCartItems} />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
