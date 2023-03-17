@@ -8,6 +8,7 @@ export default function Shop(props){
         arr[title] = ((props.cartItems[title] ?? 0) + 1)
         console.log(props.cartItems);
         props.setCartItems(arr);
+        props.setCartShown(true);
     }
     
     class AddToCart extends React.Component {

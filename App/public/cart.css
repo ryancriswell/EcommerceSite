@@ -15,6 +15,12 @@
     transition-duration: 0.5s;
     box-shadow: 0px 0px 15px rgba(60, 42, 22, 75%);
 }
+
+@media(prefers-reduced-motion: reduce) {
+    #cart {
+        transition: none !important;
+    }
+}
 #cart a {
     color: white;
 }

@@ -14,20 +14,22 @@ function App(){
     const [cartItems, setCartItems] = React.useState(    
       {}
     );
-    console.log("uwu")
+    const [cartShown, setCartShown] = React.useState(    
+      false
+    );
 
 return (
     <div>
-      <Header/>
-      <Cart cartItems={cartItems} setCartItems={setCartItems} />
+      <Header setCartShown={setCartShown} cartShown={cartShown} />
+      <Cart cartItems={cartItems} setCartItems={setCartItems} cartShown={cartShown} setCartShown={setCartShown} />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
-        <Route path="/shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems} />}/>
+        <Route path="/shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems} setCartShown={setCartShown} />}/>
         <Route path="/locations" element={<Locations/>}/>
         {/* ADD MORE ROUTES HERE!! */}
       </Routes>
-      <Footer />
+      <Footer setCartShown={setCartShown} cartShown={cartShown}/>
     </div>
   );
 }

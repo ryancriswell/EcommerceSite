@@ -63,8 +63,6 @@ class CartTable extends React.Component {
     }
 }
 export default function Cart(props) {
-    const [shown, setShown] = React.useState(true);
-
     let itemList = [];
 
     for(let item in props.cartItems) {
@@ -95,7 +93,7 @@ export default function Cart(props) {
 
     const hide = (event) => {
         event.preventDefault();
-        setShown(false);
+        props.setCartShown(false);
     }
 
     let isEmpty = props.cartItems.length == 0;
@@ -105,7 +103,7 @@ export default function Cart(props) {
     let cancel = () => props.setCartItems({});
 
 
-    return <div id="cart" className={shown ? "shown" : ""}>
+    return <div id="cart" className={props.cartShown ? "shown" : ""}>
         <h1>My Cart</h1>
         <a id="cart-close" onClick={hide} href="javascript:void()">
             <i aria-hidden="true" className="fas fa-xmark" title="Close"></i>

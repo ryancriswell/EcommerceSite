@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(props) {
+    let cartHandler = (event) => {
+        event.preventDefault();
+        props.setCartShown(!props.cartShown)
+    }
+    let stub = (event) => {
+        event.preventDefault();
+        alert("Stub!");
+    }
     return <footer>
         <div className="footer-section">
             <h1>Keep in touch with us!</h1>
@@ -20,8 +28,8 @@ export default function Footer() {
         <div className="footer-section">
             <h2>Account</h2>
             <ul>
-                <li><a href="my-account">My Account</a></li>
-                <li><a href="cart">Cart</a></li>
+                <li><a href="my-account" onClick={stub}>My Account</a></li>
+                <li><a href="cart" onClick={cartHandler}>Cart</a></li>
             </ul>
         </div>
         <div className="footer-section">
