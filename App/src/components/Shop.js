@@ -11,7 +11,7 @@ export default function Shop(props){
 
         render() {
             return <div>
-                <button onClick={() => handleClick(this.props.title)}>
+                <button>
                     <span className="add-to-cart">Add To cart</span>
                 </button>
             </div>

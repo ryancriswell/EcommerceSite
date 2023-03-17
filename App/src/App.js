@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import Shop from "./components/Shop";
 import Footer from "./components/Footer";
 import Locations from "./components/Locations";
+import Cart from "./components/Cart";
 import React from "react";
 
 import {Routes, Route} from "react-router-dom";
@@ -18,10 +19,10 @@ function App(){
       "Eagle Bean": 0,
       "Decaf Bean": 0}
     );
-    
 return (
     <div>
       <Header/>
+      <Cart />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
