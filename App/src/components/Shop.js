@@ -1,12 +1,21 @@
 import React from "react";
 import { ItemShowcase } from "./ItemShowcase";
 
-export default function Shop(){
+export default function Shop(props){  
 
+    function handleClick(title){
+        let arr = {...props.cartItems};
+        arr[title] = ((props.cartItems[title] ?? 0) + 1)
+        console.log(props.cartItems);
+        props.setCartItems(arr);
+        props.setCartShown(true);
+    }
+    
     class AddToCart extends React.Component {
+
         render() {
             return <div>
-                <button>
+                <button onClick={() => handleClick(this.props.title)}>
                     <span className="add-to-cart">Add To cart</span>
                 </button>
             </div>
@@ -16,7 +25,7 @@ export default function Shop(){
         render() {
             return <div>
                 {super.render()}
-                <AddToCart />
+                <AddToCart title={this.props.title}/>
             </div>                        
         }
     }
@@ -27,7 +36,7 @@ export default function Shop(){
                 <section className="showcase-container" id="Azetec-Bean">
                     <Item image-src="../images/Aztec-Bean.png" title="Aztec Bean" />
                     <Item image-src="../images/Brazil-Beans.png" title="Brazil Bean" />
-                    <Item image-src="../images/Mocha-Bag.png" title="Mocha Bag" />
+                    <Item image-src="../images/Mocha Bag.png" title="Mocha Bag" />
                 </section>
                 <section className="showcase-container" id="Robusta-Bean">
                     <Item image-src="../images/Colombia-Bean.png" title="Colombia Bean" />

@@ -56,6 +56,21 @@ footer small {
     color: white;
     font-size: x-large;
 }
+footer input, footer textarea {
+    color: white;
+    background-color: rgba(255, 255, 255, 10%);
+    border:none;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    resize:vertical;
+}
+footer input:focus, footer textarea:focus {
+    background-color: rgba(255, 255, 255, 20%);
+    outline-style: dashed;
+
+}
 @media(prefers-reduced-motion: reduce) {
     .footer-section li > a {
         transition-property: none !important;

@@ -3,10 +3,11 @@ import React from 'react';
 /**
  * Full Header, including logo, account buttons, nav bar, and banner - common to each page
  */
-export default function Header(){
+export default function Header(props){
 
     function NavBar() {
         let buttons = []
+        buttons.push(<a key="home" href="/" className="nav-button">Home</a>);
         buttons.push(<a key="about" href="/about-us" className="nav-button">About Us</a>);
         buttons.push(<a key="shop" href="/shop" className="nav-button">Shop</a>);
         buttons.push(<a key="subscribe" href="/subscription" className="nav-button">Subscription</a>);
@@ -43,18 +44,26 @@ export default function Header(){
     /**
      * Tools, including cart, account settings, and search.
      */
-    function Toolbox(){
+    function Toolbox(props){
+        let cartHandler = (event) => {
+            event.preventDefault();
+            props.setCartShown(!props.cartShown)
+        }
+        let stub = (event) => {
+            event.preventDefault();
+            alert("Stub!");
+        }
         return (
             <div id="tools">
-                <a href="search">
+                <a href="search" onClick={stub}>
                     <i aria-hidden="true" className="fas fa-magnifying-glass" title="Search"></i>
                     <span className="sr-only">Search</span>
                 </a>
-                <a href="account">
+                <a href="account" onClick={stub}>
                     <i aria-hidden="true" className="fas fa-user" title="My Account"></i>
                     <span className="sr-only">Account</span>
                 </a>
-                <a href="cart">
+                <a href="cart" onClick={cartHandler}>
                     <i aria-hidden="true" className="fas fa-cart-shopping" title="My Cart"></i>
                     <span className="sr-only">My Cart</span>
                 </a>
@@ -71,7 +80,7 @@ export default function Header(){
                 <a display="block" href="/" id="logo-container">
                     <img src="../images/logo.png" alt="Lads Coffee Co. Logo" id="logo" />
                 </a>
-                {Toolbox()}
+                {Toolbox(props)}
             </div>
             {NavBar()}
         </nav>
