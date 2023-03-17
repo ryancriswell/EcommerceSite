@@ -1,3 +1,11 @@
+Create Table User (
+  user_id int primary key AUTO_INCREMENT,
+  username varchar(16) not null,
+  register_date datetime default CURRENT_TIMESTAMP,
+  salt int not null,
+  password_hash char(64) not null -- SHA256?
+);
+
 Create Table Administrator (
   user_id int primary key,
   last_accessed datetime,
@@ -15,13 +23,6 @@ Create Table AdministratorPermission (
     on update restrict
 );
 
-Create Table User (
-  user_id int primary key AUTO_INCREMENT,
-  username varchar(16) not null,
-  register_date datetime default CURRENT_TIMESTAMP,
-  salt int not null,
-  password_hash char(64) not null -- SHA256?
-);
 
 Create Table CustomerPayment (
   user_id int,
@@ -59,6 +60,15 @@ Create Table UserOrder (
     on delete set null -- We want to remember previous orders even if the user deletes their account.
     on update cascade
 );
+Create Table RecurringOrder (
+  order_id int,
+  recur_period_days int not null,
+  first_date date not null,
+  final_date date, -- nullable - perpetual subscription
+  foreign key (order_id) references UserOrder(order_id)
+    on delete restrict -- Orders should not be deleted while ongoing! Cancel subscription first.
+    on update cascade
+);
 Create Table OrderItem (
   order_id int,
   item_id int,
@@ -70,16 +80,7 @@ Create Table OrderItem (
     on update cascade,
   foreign key (item_id) references item(item_id)
     on delete set null -- Remember deleted items on orders
-    on update cascade
-);
-Create Table RecurringOrder (
-  order_id int,
-  recur_period_days int not null,
-  first_date date not null,
-  final_date date, -- nullable - perpetual subscription
-  foreign key (order_id) references UserOrder(order_id)
-    on delete restrict -- Orders should not be deleted while ongoing! Cancel subscription first.
-    on update cascade
+    on update cascade,
 );
 
 Create Table LogEntry (
