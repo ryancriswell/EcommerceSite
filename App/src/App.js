@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Locations from "./components/Locations";
 import Cart from "./components/Cart";
 import React from "react";
+import Admin from "./components/Admin";
 
 import {Routes, Route} from "react-router-dom";
 
@@ -27,6 +28,7 @@ return (
         <Route path="/about-us" element={<AboutUs/>}/>
         <Route path="/shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems} setCartShown={setCartShown} />}/>
         <Route path="/locations" element={<Locations/>}/>
+        <Route path="/Admin" element={<Admin/>}/>
         {/* ADD MORE ROUTES HERE!! */}
       </Routes>
       <Footer setCartShown={setCartShown} cartShown={cartShown}/>
