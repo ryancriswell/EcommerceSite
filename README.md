@@ -7,6 +7,8 @@ HTML Lads Ecommerce Site for CSCD 378
 
 ## Running
 
+### Frontend
+
 This is a react app, executed through NodeJS. As such, `node` and `npm` are required.
 
 * In your terminal of choice, navigate to the root folder, `.../EcommerceSite/App`
@@ -16,7 +18,9 @@ This is a react app, executed through NodeJS. As such, `node` and `npm` are requ
 * Inside the App directory, execute `npm start` to run the local server.
 * In your browser, navigate to `http://localhost:3000/` if it doesn't automatically open
 
-## Server Running
+### Server
+
+The server is not required to execute the frontend.
 
 We utilize MySQL, meaning you will need a the test server installed on your computer - MySQL community server.
 
