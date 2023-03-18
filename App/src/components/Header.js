@@ -51,7 +51,24 @@ export default function Header(props){
         }
         let stub = (event) => {
             event.preventDefault();
-            alert("Stub!");
+
+            let text;
+            let email = prompt("Please enter your login:", "Harry Potter");
+
+            if (email == null || email == "") {
+              email = "User cancelled the prompt.";
+            } else {
+              email = "Hello " + email + "! How are you today?";
+            }
+            
+            fetch("/login", {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(email)
+            })
+
+
+
         }
         return (
             <div id="tools">

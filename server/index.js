@@ -43,6 +43,20 @@ app.post("/cart", (req, res) => {
 });
 // Login/out
 app.post("/login", (req, res) => {
+    email = req.body;
+
+
+    let sql = "select user_id from administrator; select email, user_id from user;";
+
+
+    if(email != null || email != ""){
+
+      connection.query(sql, (err, result) => {
+        if(err) throw(err);
+        console.log(result);
+
+      });
+    }
 
 });
 //updates the table users with a null user other then the email!
