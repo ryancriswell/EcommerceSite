@@ -15,6 +15,24 @@ This is a react app, executed through NodeJS. As such, `node` and `npm` are requ
 * Inside the App directory, execute `npm start` to run the local server.
 * In your browser, navigate to `http://localhost:3000/` if it doesn't automatically open
 
+## Server Running
+
+We utilize MySQL, meaning you will need a the test server installed on your computer - MySQL community server.
+
+This should install a service which default is named MySQL80
+-It must be running for this to work
+
+Using the desired method, either terminal or using mysql workbench run the final_turnindbscript.sql script
+
+You will also need to add a user to be able to access the database we have it setup to be user: `node` with the password `ReallyCoolSecurePassword!123` to the db `ecommerce_db`
+
+
+* In your terminal of choice, navigate to the root folder, `.../EcommerceSite/server`
+* Once in the server folder to install the dependencies: 
+* `npm i body-parser express mysql promise-mysql`
+* Now inside the server folder run `npm start`
+
+
 ## Features
 
 * A functional (though locally stored) cart and shop are available.
