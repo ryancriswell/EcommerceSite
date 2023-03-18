@@ -6,7 +6,10 @@ HTML Lads Ecommerce Site for CSCD 378
 This is a react app created using create-react-app.
 
 * In your terminal of choice, navigate to the root folder, `.../EcommerceSite/App`
-* With npm installed, execute `npm insall react-scripts` to fetch the necessary Node components.
+* With npm installed, you may have to install these packages if you don't have them already:
+* execute `npm install react-scripts` to fetch the necessary Node components.
+* `npm i @react-google-maps/api`, 
+* `npm i react-router-dom`
 * Inside the App directory, execute `npm start` to run the local server.
 * In your browser, navigate to `http://localhost:3000/` if it doesn't automatically open
 
