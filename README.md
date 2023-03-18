@@ -12,6 +12,7 @@ This is a react app, executed through NodeJS. As such, `node` and `npm` are requ
 * In your terminal of choice, navigate to the root folder, `.../EcommerceSite/App`
 * With npm installed, you may have to install some packages if you don't have them already:
 * `npm i react-scripts @react-google-maps/api react-router-dom react-dom` to fetch package dependencies.
+* `npm install` to fetch transitive dependencies from package.json.
 * Inside the App directory, execute `npm start` to run the local server.
 * In your browser, navigate to `http://localhost:3000/` if it doesn't automatically open
 
