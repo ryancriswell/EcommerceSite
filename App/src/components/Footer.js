@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(props) {
     let cartHandler = (event) => {
         event.preventDefault();
         props.setCartShown(!props.cartShown)

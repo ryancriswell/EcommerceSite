@@ -24,7 +24,7 @@ This should install a service which default is named MySQL80
 
 Using the desired method, either terminal or using mysql workbench run the final_turnindbscript.sql script
 
-You will also need to add a user to be able to access the database 
+You will also need to add a user to be able to access the database we have it setup to be user: `node` with the password `ReallyCoolSecurePassword!123` to the db `ecommerce_db`
 
 
 * In your terminal of choice, navigate to the root folder, `.../EcommerceSite/server`
